@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head><title>CALCULATOR BY JAYESH</title></head>
+    <body>
+        <H1>THIS CALCULATOR BELONG TO JAYESH CHAUHAN</H1>
+        <h4>Please enter any number for both the input boxex and  
+            <br/> select a operator, wheather "+" , "-" , "*" , "/"
+            <br/> let us checking this calculator and having function
+            <br/> ......
+        </h4>
+        <br/>
+        <BR/>
+        <input type="number" name="first" id="first" step="any"/>
+        <select id="operator01">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" name="second" id="second" step="any"/>
+       
+        <br/>
+        <br/>
+        <input type="text" name="result" id="result" readonly="" />
+        <br/>
+        <br/>
+        <button onclick="calculate()">calculate</button>
+    </body>
+        <script type="text/javascript">
+             function calculate() {
+                var operator1 = document.getElementById('first').value;
+                var operator2 = document.getElementById('second').value;
+                var operator01 = document.getElementById('operator01').value;
+             
+                if(operator01 == '+') {
+                    var result = parseInt(operator1) + parseInt(operator2);
+                }
+                if(operator01 == '-') {
+                    var result = parseInt(operator1) - parseInt(operator2);
+                }
+                if(operator01 == '*') {
+                    var result = parseInt(operator1) * parseInt(operator2);
+                }
+                if(operator01 == '/') {
+                    var result = parseInt(operator1) / parseInt(operator2);
+                }
+       document.getElementById('result').value = result;         
+            }
+
+        </script>
+       
+</html>
